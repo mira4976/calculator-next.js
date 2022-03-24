@@ -5,7 +5,10 @@ import Layout from '../../componets/layout'
     
 export default function Home() {
   
+
+
   return (
+
     <Layout>
       
     <Head>
@@ -15,8 +18,8 @@ export default function Home() {
  
     <div><textarea id = "display" cols="30" defaultValue={0}></textarea></div>
 
-    <button className='addnumber' value={0} onClick={addnumber(0)}>0</button> 
-    <button className='addnumber' value={1}>1</button> 
+    <button className='addnumber' value={"hogehoge"} id = "button" >0</button> 
+    <button className='addnumber' value={"hogettyo"} id = "button">1</button> 
     <button className='addnumber' value={2}>2</button> 
     <button className='addnumber' value={3}>3</button> 
     <button className='addnumber' value={4}>4</button> 

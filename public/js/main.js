@@ -30,15 +30,16 @@ var addnumber = document.getElementsByClassName("addnumber");//classNameから�
 
 for(let i = 0; i < addnumber.length; i++){//forで要素数分ループ処理
 
-    addnumber[i].addEventListener('click',function addnumber(number){
+    addnumber[i].addEventListener('click',function addnumber(){
         if (numberIn == true) { //数字がディスプレイに入っている場合
             document.querySelector('textarea').value = ""; //ディスプレイの表示を消す
             numberIn = false; //数字はディスプレイに入っていない
           }
-          document.querySelector('textarea').value += number; //ディスプレイに数字を表示させていく
-          input = document.getElementById("display").value; //ディスプレイの表示から値を受けとりinputに入れる
-          numberPush = true; //数字のボタンが押された
-          ;
+
+          
+          document.querySelector('textarea').value += document.getElementById("button").value; //ディスプレイに数字を表示させていく
+/*           input = document.getElementById("display").value; //ディスプレイの表示から値を受けとりinputに入れる
+          numberPush = true; //数字のボタンが押された */
     },false);
 
 }
@@ -90,7 +91,7 @@ function addoperator(operator) {
 //ACボタンを押す
 var allclear = document.getElementById('allclear'); //idにあうドキュメント要素を取得してallclearに入れる
 allclear.addEventListener('click',function allclear(){//クリックされたのでallclearを実行する
-    document.querySelector('textarea').value = 1; //ディスプレイの表示をOに初期化する
+    document.querySelector('textarea').value = 0; //ディスプレイの表示をOに初期化する
     input = 0; //現在入力している値を消す
     total = 0; //合計の値を初期化する
     numberIn = true; //数字がディスプレイに入っている
